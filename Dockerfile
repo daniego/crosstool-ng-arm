@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:xenial
 MAINTAINER Daniel Floris <daniel.floris@gmail.com>
 
 RUN apt-get update
@@ -14,6 +14,7 @@ RUN apt-get install -y \
 	gperf \
 	libncurses5-dev \
 	libtool \
+  libtool-bin \
 	subversion \
 	texinfo \
 	tmux \
