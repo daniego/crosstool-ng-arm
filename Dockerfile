@@ -32,7 +32,7 @@ RUN ./configure --prefix=/opt/cross && \
 
 ADD ct-ng-config /root/ct-ng-conf/.config
 ADD ct-ng-env /usr/local/bin/ct-ng-env
-
+RUN chmod +x /usr/local/bin/ct-ng-env
 
 RUN apt-get remove -y wget unzip curl subversion && \
 		apt-get autoremove -y && \
