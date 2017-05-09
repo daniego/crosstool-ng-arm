@@ -30,10 +30,13 @@ RUN ./configure --prefix=/opt/cross && \
     make && \
     make install
 
+ADD ct-ng-config /root/ct-ng-conf/.config
+ADD ct-ng-env /usr/local/bin/ct-ng-env
+
+
 RUN apt-get remove -y wget unzip curl subversion && \
 		apt-get autoremove -y && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
-		
-WORKDIR /
 
+WORKDIR /
